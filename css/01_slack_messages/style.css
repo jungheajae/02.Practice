@@ -1,0 +1,102 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  background-color: rgb(214, 214, 214);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.message {
+  width: 810px;
+  height: 60px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  padding: 8px;
+}
+
+.message:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.message-user {
+  margin-right: 12px;
+}
+
+.message-user img {
+  width: 44px;
+  height: 44px;
+  border-radius: 4px;
+}
+
+.message-user img:hover {
+  opacity: 0.5;
+}
+
+.message-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2px;
+}
+
+.message-sender a {
+  color: #212021;
+  line-height: 1.25;
+  text-decoration: none;
+  margin-right: 8px;
+}
+
+.message-sender a:hover {
+  opacity: 0.5;
+}
+
+.tooltip {
+  position: relative;
+  font-size: 14px;
+  line-height: 1.4285714286;
+  color: #626162;
+  cursor: pointer;
+}
+
+.tooltip-content {
+  visibility: hidden;
+  position: absolute;
+  width: 134px;
+  height: 32px;
+  top: -35px;
+  left: -50px;
+  z-index: 1;
+  line-height: 1.7142857143;
+  padding: 4px 12px;
+  background-color: black;
+  border-radius: 5px;
+  color: white;
+}
+
+.tooltip-content::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-top: 4px solid #000;
+  border-right: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-left: 4px solid transparent;
+  transform: translateX(-50%);
+}
+
+.tooltip:hover .tooltip-content {
+  visibility: visible;
+}
+
+.message-text {
+  line-height: 1.25;
+}
